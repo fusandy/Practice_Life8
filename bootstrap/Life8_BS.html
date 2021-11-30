@@ -8,34 +8,31 @@
     <!-- BS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <!-- FontAwesome -->
-    <link rel="stylesheet" href="../fontawesome-free-5.15.4-web/css/all.css">
+    <link rel="stylesheet" href="../fontawesome/css/all.css">
     <!-- CSS -->
     <link rel="stylesheet" href="./Life8_BS.css">
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="./slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css"/>
 </head>
 <body>
     <nav>
         <div class="container-fluid">
-            <!-- Nav Top  -->
             <!-- Mobile Nav Top -->
             <div class="row justify-content-between align-items-center">
                 <div class="mobile-nav-top-left d-block d-md-none">
                     <img src="https://www.life8.com.tw/UserFiles/Custom/m/images/ToolsIconMenu.png" alt="bars"> 
                 </div>
                 <div class="mobileLogo d-block d-md-none">
-                    <img src="https://www.life8.com.tw/UserFiles/Custom/m/images/main.jpg" alt="mobileLogo">
+                    <img src="https://www.life8.com.tw/UserFiles/Custom/m/images/main.jpg" alt="mobileLogo" width="250px">
                 </div>
                 <div class="mobile-nav-top-right d-flex justify-content-between align-items-center d-block d-md-none">
                     <div class="itemsNumber mr-1">0</div>
                     <img src="https://www.life8.com.tw/UserFiles/Custom/m/images/ToolsIconCart.gif" alt="shoppingCart" class="mobileShoppingCart">
                 </div>
-            <!-- Web Nav Top  -->
-                <div class="webLogo m-auto d-none d-md-block">
-                    <img src="https://www.life8-photo.com/icon/life8logo.png" alt="webLogo">
-                </div>
             </div>
-            <!-- Nav Bottom -->
             <!-- Mobile Nav Bottom -->
-            <div class="mobile-nav-link d-block d-md-none">
+            <div class="mobile-nav-link d-block d-md-none mt-3">
                 <ul class="list-unstyled d-flex justify-content-center">
                     <li><a href="#">鞋款</a>|</li>
                     <li><a href="#">服裝</a>|</li>
@@ -44,14 +41,24 @@
                     <li><a href="#">ALL WEARS</a></li>
                 </ul>
             </div>
+        </div>
+
+        <div class="container">
+            <!-- Web Nav Top  -->
+            <div class="row">
+                <div class="webLogo m-auto d-none d-md-block">
+                    <img src="https://www.life8-photo.com/icon/life8logo.png" alt="webLogo" width="300px">
+                </div>
+            </div>
             <!-- Web Nav Bottom -->
             <div class="web-nav-link d-none d-md-block">
                 <div class="row m-auto align-items-center">
-                    <div class="web-nav-link-left d-flex align-items-center col-2">
+                    <div class="web-nav-link-left d-flex align-items-center col-1">
                         <i class="fas fa-search"></i>
                         <form action=""><input type="text" class="search" placeholder="Search"></form>
                     </div>
-                    <div class="web-nav-link-middle pt-3 col-8">
+                    <!-- 如何分別調整a的CSS值?在a下class不會生效 -->
+                    <div class="web-nav-link-middle pt-3 px-5 col-10">
                         <ul class="list-unstyled d-flex justify-content-between">
                             <li><a href="#">SHOES</a></li>
                             <li><a href="#">CLOTHES</a></li>
@@ -62,24 +69,103 @@
                             <li><a href="#">STORES</a></li>
                         </ul>
                     </div>
-                    <div class="web-nav-link-right d-flex justify-content-end align-items-center col-2">
-                        <div class="webShoppingCart mr-3">
+                    <!-- 臨界點時，左邊的圖示會與link區尾巴重疊 -->
+                    <div class="web-nav-link-right d-flex justify-content-end align-items-center col-1">
+                        <div class="webShoppingCart mr-2">
                             <img src="https://www.life8.com.tw/UserFiles/Custom/m/images/ToolsIconCart.gif" alt="shoppingCart" class="webShoppingCart">
                         </div>
                         <i class="fas fa-user pt-1"></i>
                     </div>
                 </div>
             </div>
-
-
-        
-        
-        
-        
-        
-        
         </div>
     </nav>
+    <!-- nav end  -->
+
+    <!-- Mobile Banner  -->
+    <div class="container-fluid">
+        <div class="banner d-block d-md-none">
+            <div><img src="../life8/1119-BANNER-1.jpg" alt=""></div>
+            <div><img src="../life8/2021-11-LF-BANNER-a-2.jpg" alt=""></div>
+            <div><img src="../life8/2021-1102-index-3.jpg" alt=""></div>
+            <div><img src="../life8/1001-banner-4.jpg" alt=""></div>
+            <div><img src="../life8/1680_banner-3-5.jpg" alt=""></div>
+            <div><img src="../life8/0823-BANNER-6.jpg" alt=""></div>
+            <div><img src="../life8/0831-BN-7.jpg" alt=""></div>
+            <div><img src="../life8/0913-banner-8.jpg" alt=""></div>
+            <div><img src="../life8/0813-BANNER-9.jpg" alt=""></div>
+            <div><img src="../life8/0830-BANNER-10.jpg" alt=""></div>
+            <div><img src="../life8/index01-11.jpg" alt=""></div>
+            <div><img src="../life8/life8/index-j-12.jpg" alt=""></div>
+            <div><img src="../life8/index01 (1)-13.jpg" alt=""></div>
+            <div><img src="../life8/0709-index-14.jpg" alt=""></div>
+        </div>
+    </div>
+    <!-- Web Banner  -->
+    <div class="container">
+        <div class="banner col-12 d-none d-md-block">
+            <div><img src="../life8/1119-BANNER-1.jpg" alt=""></div>
+            <div><img src="../life8/2021-11-LF-BANNER-a-2.jpg" alt=""></div>
+            <div><img src="../life8/2021-1102-index-3.jpg" alt=""></div>
+            <div><img src="../life8/1001-banner-4.jpg" alt=""></div>
+            <div><img src="../life8/1680_banner-3-5.jpg" alt=""></div>
+            <div><img src="../life8/0823-BANNER-6.jpg" alt=""></div>
+            <div><img src="../life8/0831-BN-7.jpg" alt=""></div>
+            <div><img src="../life8/0913-banner-8.jpg" alt=""></div>
+            <div><img src="../life8/0813-BANNER-9.jpg" alt=""></div>
+            <div><img src="../life8/0830-BANNER-10.jpg" alt=""></div>
+            <div><img src="../life8/index01-11.jpg" alt=""></div>
+            <div><img src="../life8/life8/index-j-12.jpg" alt=""></div>
+            <div><img src="../life8/index01 (1)-13.jpg" alt=""></div>
+            <div><img src="../life8/0709-index-14.jpg" alt=""></div>
+        </div>
+    </div>
+    <!-- banner end  -->
+
+    <!-- mobile與web不同container下怎麼做col-wrap  -->
+    <!-- 圖片寬度怎麼訂? mobile與web分別下class嗎? -->
+    <!-- mobile collection -->
+    <div class="container-fluid">
+        <div class="collection d-block d-md-none">
+            <h6>COLLECTION</h6>
+            <div class="collectionItem mb-3">
+                <img src="../life8/left-1.jpeg" alt="">
+            </div>
+            <div class="collectionItem mb-3">
+                <img src="../life8/right-1.jpg" alt="">
+            </div>
+            <div class="collectionItem mb-3">
+                <img src="../life8/left-2.gif" alt="">
+            </div>
+            <div class="collectionItem mb-3">
+                <img src="../life8/right-2.gif" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- web collection -->
+    <div class="container">
+        <div class="collection d-none d-md-block">
+            <h6>COLLECTION</h6>
+            <div class="row">
+                <div class="collectionItem col-md-6 mb-3">
+                    <img src="../life8/left-1.jpeg" alt="">
+                </div>
+                <div class="collectionItem col-md-6 mb-3">
+                    <img src="../life8/right-1.jpg" alt="">
+                </div>
+                <div class="collectionItem col-md-6 mb-3">
+                    <img src="../life8/left-2.gif" alt="">
+                </div>
+                <div class="collectionItem col-md-6 mb-3">
+                    <img src="../life8/right-2.gif" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- collection end -->
+
+
+
 
 
 
@@ -96,5 +182,15 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="./slick/slick.min.js"></script>
+    
+    <script>
+        $('.banner').slick({
+            dots: true,
+        });
+    </script>
+    
 </body>
 </html>
