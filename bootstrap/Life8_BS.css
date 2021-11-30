@@ -1,0 +1,33 @@
+.itemsNumber{
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: rgb(180, 180, 180);
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+}
+.mobileShoppingCart, .webShoppingCart{
+    width: 1.5rem;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0 .7rem;
+}
+.fas{
+    color: rgb(180, 180, 180);
+    font-size: 1rem;
+}
+.search{
+    width: 8rem;
+    margin-left: .7rem;
+    border: none;
+}
+.web-nav-link-middle>ul, .mobile-nav-link>ul{
+    white-space: nowrap;
+}
+.fa-user{
+    font-size: 1.3rem;
+}
