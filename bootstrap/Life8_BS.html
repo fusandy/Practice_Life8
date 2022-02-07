@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Life8 BS</title>
     <!-- BS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="/bootstrap-5.1.1-dist/css/bootstrap.css">
     <!-- FontAwesome -->
-    <link rel="stylesheet" href="../fontawesome-free-5.15.4-web/css/all.css">
+    <link rel="stylesheet" href="/fontawesome/css/all.css">
     <!-- CSS -->
     <link rel="stylesheet" href="./Life8_BS.css">
     <!-- Google Font -->
@@ -21,57 +21,69 @@
     <nav>
         <div class="container" id="top">
             <!-- Mobile Nav Top -->
-            <div class="row justify-content-between align-items-center">
-                <div class="mobile-nav-top-left d-block d-md-none">
-                    <img src="https://www.life8.com.tw/UserFiles/Custom/m/images/ToolsIconMenu.png" alt="bars"> 
+            <div class="row d-flex justify-content-between">
+                <div class="col-4">
+                    <div class="mobile-nav-top-left pt-3 d-flex justify-content-start align-items-center d-lg-none">
+                        <img src="https://www.life8.com.tw/UserFiles/Custom/m/images/ToolsIconMenu.png" alt="bars"> 
+                    </div>
                 </div>
-                <div class="mobileLogo d-block d-md-none">
-                    <img src="https://www.life8.com.tw/UserFiles/Custom/m/images/main.jpg" alt="mobileLogo" width="250px">
+                <div class="col-4">
+                    <div class="mobileLogo d-flex justify-content-center align-items-center d-lg-none">
+                        <img src="/life8/life8logo.png" alt="mobileLogo" width="130px">
+                    </div>
                 </div>
-                <div class="mobile-nav-top-right d-flex justify-content-between align-items-center d-block d-md-none">
-                    <div class="itemsNumber mr-1">0</div>
-                    <img src="https://www.life8.com.tw/UserFiles/Custom/m/images/ToolsIconCart.gif" alt="shoppingCart" class="mobileShoppingCart">
+                <div class="col-4">
+                    <div class="mobile-nav-top-right pt-4 d-flex justify-content-end align-items-center d-lg-none">
+                        <div class="itemsNumber">0</div>
+                        <img src="https://www.life8.com.tw/UserFiles/Custom/m/images/ToolsIconCart.gif" alt="shoppingCart" class="mobileShoppingCart">
+                    </div>
                 </div>
             </div>
             <!-- Mobile Nav Bottom -->
-            <div class="mobile-nav-link d-block d-md-none mt-3">
+            <div class="mobile-nav-link d-block d-lg-none mt-3">
                 <ul class="list-unstyled d-flex justify-content-center">
-                    <li><a class="text-dark font-weight-bold mx-1" href="#">鞋款</a>|</li>
-                    <li><a class="text-dark font-weight-bold mx-1" href="#">服裝</a>|</li>
-                    <li><a class="text-dark font-weight-bold mx-1" href="#">配件</a>|</li>
-                    <li><a class="text-dark font-weight-bold mx-1" href="#">品牌</a>|</li>
-                    <li><a class="text-dark font-weight-bold mx-1" href="#">ALL WEARS</a></li>
+                    <li><a class="text-dark font-weight-bold mx-2" href="#">鞋款</a>|</li>
+                    <li><a class="text-dark font-weight-bold mx-2" href="#">服裝</a>|</li>
+                    <li><a class="text-dark font-weight-bold mx-2" href="#">配件</a>|</li>
+                    <li><a class="text-dark font-weight-bold mx-2" href="#">品牌</a>|</li>
+                    <li><a class="text-dark font-weight-bold mx-2" href="#">ALL WEARS</a></li>
                 </ul>
             </div>
             <!-- Web Nav Top  -->
             <div class="row">
-                <div class="webLogo m-auto d-none d-md-block">
-                    <img src="https://www.life8-photo.com/icon/life8logo.png" alt="webLogo" width="300px">
+                <div class="webLogo d-none d-lg-block">
+                    <a href="#"><img src="/life8/life8logo.png" alt="webLogo" width="250px"></a>
                 </div>
             </div>
             <!-- Web Nav Bottom -->
-            <div class="web-nav-link d-none d-md-block">
-                <div class="row m-auto align-items-center">
-                    <div class="web-nav-link-left d-flex align-items-center col-1">
-                        <i class="fas fa-search"></i>
-                        <form action=""><input type="text" class="search" placeholder="Search"></form>
-                    </div>
-                    <div class="web-nav-link-middle pt-3 px-5 col-10">
-                        <ul class="list-unstyled d-flex justify-content-between">
-                            <li><a class="text-dark font-weight-light " href="#">SHOES</a></li>
-                            <li><a class="text-dark font-weight-light " href="#">CLOTHES</a></li>
-                            <li><a class="text-dark font-weight-light " href="#">BAGS</a></li>
-                            <li><a class="text-dark font-weight-light " href="#">ACCESSORIES</a></li>
-                            <li><a class="text-dark font-weight-light " href="#">ALL WEARS</a></li>
-                            <li><a class="text-dark font-weight-light " href="#">BRAND</a></li>
-                            <li><a class="text-dark font-weight-light " href="#">STORES</a></li>
-                        </ul>
-                    </div>
-                    <div class="web-nav-link-right d-flex justify-content-end align-items-center col-1">
-                        <div class="webShoppingCart mr-2">
-                            <img src="https://www.life8.com.tw/UserFiles/Custom/m/images/ToolsIconCart.gif" alt="shoppingCart" class="webShoppingCart">
+            <div class="web-nav-link d-none d-lg-block mb-3">
+                <div class="row d-flex justify-content-between align-items-center">
+                    <div class="col-1">
+                        <div class="web-nav-link-left d-flex align-items-center">
+                            <i class="fas fa-search"></i>
+                            <form action=""><input type="text" class="search" placeholder="SEARCH"></form>
                         </div>
-                        <i class="fas fa-user pt-1"></i>
+                    </div>
+                    <div class="col-10">
+                        <div class="web-nav-link-middle pt-3 px-4">
+                            <ul class="list-unstyled d-flex justify-content-between">
+                                <li><a href="#">SHOES</a></li>
+                                <li><a href="#">CLOTHES</a></li>
+                                <li><a href="#">BAGS</a></li>
+                                <li><a href="#">ACCESSORIES</a></li>
+                                <li><a href="#">ALL WEARS</a></li>
+                                <li><a href="#">BRAND</a></li>
+                                <li><a href="#">STORES</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-1">
+                        <div class="web-nav-link-right d-flex justify-content-end align-items-center">
+                            <div class="webShoppingCart">
+                                <img src="/life8/bag.png" alt="shoppingCart" class="webShoppingCart">
+                            </div>
+                            <i class="fas fa-user pt-1"></i>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -81,31 +93,66 @@
 
     <!-- BANNER  -->
     <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="banner">
-                    <img src="../life8/1119-BANNER-1.jpg" alt="logo">
-                </div>
+        <div class="banner-wrap">
+            <div class="banner-img d-flex">
+                <img src="/life8/banner (1).jpg" alt="logo">
+                <img src="/life8/banner (2).jpg" alt="logo">
+                <img src="/life8/banner (3).jpg" alt="logo">
+                <img src="/life8/banner (4).jpg" alt="logo">
+                <img src="/life8/banner (5).jpg" alt="logo">
+                <img src="/life8/banner (6).jpg" alt="logo">
+                <img src="/life8/banner (7).jpg" alt="logo">
+                <img src="/life8/banner (8).jpg" alt="logo">
+                <img src="/life8/banner (9).jpg" alt="logo">
+                <img src="/life8/banner (10).jpg" alt="logo">
+                <img src="/life8/banner (11).jpg" alt="logo">
+                <img src="/life8/banner (12).jpg" alt="logo">
+                <img src="/life8/banner (13).jpg" alt="logo">                
             </div>
         </div>
+            <div class="wrap-dot">
+                <ul class="list-unstyled d-flex justify-content-center align-items-center mt-2">
+                    <li class="dot" style="background-color: rgb(87, 87, 87);"></li>
+                    <li class="dot"></li>
+                    <li class="dot"></li>
+                    <li class="dot"></li>
+                    <li class="dot"></li>
+                    <li class="dot"></li>
+                    <li class="dot"></li>
+                    <li class="dot"></li>
+                    <li class="dot"></li>
+                    <li class="dot"></li>
+                    <li class="dot"></li>
+                    <li class="dot"></li>
+                    <li class="dot"></li>
+                </ul>
+            </div>
     </div>
     <!-- BANNER end  -->
 
     <!-- COLLECTION -->
     <div class="container">
         <h6>COLLECTION</h6>
-            <div class="row">
-            <div class="collection col-12 col-md-6 mb-3">
-                <img src="../life8/left-1.jpeg" alt="">
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <div class="collection mb-3">
+                    <img src="/life8/left-1.jpeg" alt="">
+                </div>
             </div>
-            <div class="collection col-12 col-md-6 mb-3">
-                <img src="../life8/right-1.jpg" alt="">
+            <div class="col-12 col-lg-6">
+                <div class="collection mb-3">
+                    <img src="/life8/right-1.jpg" alt="">
+                </div>
             </div>
-            <div class="collection col-12 col-md-6 mb-3">
-                <img src="../life8/right-2.gif" alt="">
+            <div class="col-12 col-lg-6">
+                <div class="collection mb-3">
+                    <img src="/life8/left-2.gif" alt="">
+                </div>
             </div>
-            <div class="collection col-12 col-md-6 mb-3">
-                <img src="../life8/left-2.gif" alt="">
+            <div class="col-12 col-lg-6">
+                <div class="collection mb-3">
+                    <img src="/life8/right-2.gif" alt="">
+                </div>
             </div>
         </div>
     </div>
@@ -114,18 +161,26 @@
     <!-- EVENT -->
     <div class="container">
         <h6>EVENT</h6>
-            <div class="row">
-            <div class="event col-6 col-md-3 mb-3">
-                <img src="../life8/index-01.jpg" alt="">
+        <div class="row">
+            <div class="col-6 col-lg-3">
+                <div class="event mb-3">
+                    <img src="/life8/index-01.jpg" alt="">
+                </div>
             </div>
-            <div class="event col-6 col-md-3 mb-3">
-                <img src="../life8/index-02.jpg" alt="">
+            <div class="col-6 col-lg-3">
+                <div class="event mb-3">
+                    <img src="/life8/index-02.jpg" alt="">
+                </div>
             </div>
-            <div class="event col-6 col-md-3 mb-3">
-                <img src="../life8/index-03.jpg" alt="">
+            <div class="col-6 col-lg-3">
+                <div class="event mb-3">
+                    <img src="/life8/index-03.jpg" alt="">
+                </div>
             </div>
-            <div class="event col-6 col-md-3 mb-3">
-                <img src="../life8/index-04.jpg" alt="">
+            <div class="col-6 col-lg-3">
+                 <div class="event mb-3">
+                       <img src="/life8/index-04.jpg" alt="">
+                  </div>
             </div>
         </div>
     </div>
@@ -135,16 +190,22 @@
     <div class="container mb-5">
         <h6>STORE INFORMATION</h6>
             <div class="row">
-            <div class="store-information col-6 col-md-4 mb-3">
-                <img src="../life8/north.png" alt="">
+                <div class="col-6 col-lg-4">
+                    <div class="store-information mb-3">
+                        <img src="/life8/northern-1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <div class="store-information mb-3">
+                        <img src="/life8/central.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <div class="store-information mb-3">
+                        <img src="/life8/southern.jpg" alt="">
+                    </div>
+                </div>
             </div>
-            <div class="store-information col-6 col-md-4 mb-3">
-                <img src="../life8/middle.png" alt="">
-            </div>
-            <div class="store-information col-6 col-md-4 mb-3">
-                <img src="../life8/south.png" alt="">
-            </div>
-        </div>
     </div>
     <!-- STORE INFORMATION end -->
 
@@ -152,14 +213,14 @@
     <footer>
         <!-- Mobile Footer -->
         <div class="row">
-            <div class="col-12 d-block d-md-none">
+            <div class="col-12 d-block d-lg-none">
                 <div class="mobile-cotact">
                     <img src="//www.life8-photo.com/icon/Mobile-line-g.svg">
                 </div>
             </div>
         </div>
         <!-- Web Footer -->
-        <div class="container d-none d-md-block">
+        <div class="container d-none d-lg-block">
             <div class="row">
                 <!-- Left -->
                 <div class="col-8 d-flex">
