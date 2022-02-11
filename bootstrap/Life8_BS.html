@@ -110,8 +110,8 @@
                 <img src="/life8/banner (13).jpg" alt="logo">                
             </div>
         </div>
-            <div class="wrap-dot">
-                <ul class="list-unstyled d-flex justify-content-center align-items-center mt-2">
+            <div>
+                <ul class="wrap-dot list-unstyled d-flex justify-content-center align-items-center mt-2">
                     <li class="dot" style="background-color: rgb(87, 87, 87);"></li>
                     <li class="dot"></li>
                     <li class="dot"></li>
@@ -279,17 +279,6 @@
         <a href="#top"><img src="https://www.life8-photo.com/icon/2016/menu/back.png" alt=""></a>
     </div>
     
-
-
-
-
-
-
-
-
-
-
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
@@ -297,7 +286,20 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="./slick/slick.js"></script>
     
-    
+    <script>
+        $('.wrap-dot li').click(function(){
+            console.log('this:', $(this).index());
+
+            const index = $(this).index();
+            console.log('index:', index);
+            
+            $(this).css('background','rgb(87, 87, 87)').siblings().css('background','rgb(219, 219, 219)');
+
+            console.log($('.banner-img img').html());   // 為什麼這樣寫的結果，console.log是空的呢~?
+            //TODO : 拿到$(this).index()後，該如何把這個數字對應到 banner-img 下的子層 img~?
+
+        });
+    </script>
     
 </body>
 </html>
