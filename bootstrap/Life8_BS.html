@@ -95,7 +95,7 @@
     <div class="container">
         <div class="banner-wrap">
             <div class="banner-img d-flex">
-                <img src="/life8/banner (1).jpg" alt="logo">
+                <img src="/life8/banner (1).jpg" alt="logo" class="active">
                 <img src="/life8/banner (2).jpg" alt="logo">
                 <img src="/life8/banner (3).jpg" alt="logo">
                 <img src="/life8/banner (4).jpg" alt="logo">
@@ -275,7 +275,7 @@
     <div class="mobile-line-icon d-none d-md-block">
         <img src="//www.life8-photo.com/icon/PC-line.svg">
     </div>
-    <div class="mobile-up-icon d-none d-md-block">
+    <div class="mobile-up-icon d-none d-md-block leave">
         <a href="#top"><img src="https://www.life8-photo.com/icon/2016/menu/back.png" alt=""></a>
     </div>
     
@@ -287,18 +287,76 @@
     <script type="text/javascript" src="./slick/slick.js"></script>
     
     <script>
-        $('.wrap-dot li').click(function(){
-            console.log('this:', $(this).index());
+        let index = 0;
+        let myInterval = null;
 
-            const index = $(this).index();
-            console.log('index:', index);
+
+        $('.wrap-dot li').click(function(){
+            
+            // console.log('this:', $(this).index());
+            index = $(this).index();
             
             $(this).css('background','rgb(87, 87, 87)').siblings().css('background','rgb(219, 219, 219)');
 
-            console.log($('.banner-img img').html());   // 為什麼這樣寫的結果，console.log是空的呢~?
-            //TODO : 拿到$(this).index()後，該如何把這個數字對應到 banner-img 下的子層 img~?
-
+            // console.log($('.banner-img img').eq(index));
+            
+            $('.banner-img img').eq(index).addClass('active')
+            .siblings().removeClass('active');
+            
         });
+
+        // autoplay
+        function startInterval(){
+            myInterval = setInterval(function(){
+
+            index ++;
+            if(index > 12){
+                index = 0;
+            }
+            // console.log('index:', index);
+            $('.banner-img img').eq(index).addClass('active')
+            .siblings().removeClass('active');
+
+            $('.wrap-dot li').eq(index)
+            .css('background','rgb(87, 87, 87)')
+            .siblings().css('background','rgb(219, 219, 219)');
+
+
+            },1500);
+        }
+        
+        startInterval();
+
+        // stop autoplay while mouseenter
+        $('.banner-wrap').hover(function(){
+            clearInterval(myInterval);
+        }, function(){
+            startInterval();
+        })
+
+
+        // Back to Top icon
+        $(window).scroll(function(){
+            const scrollTop = $(window).scrollTop();
+            const top = $('.mobile-up-icon').offset().top;
+            // const bottom = $('.mobile-up-icon').offset().top;
+            
+            // console.log('window height', $(window).height);
+            console.log('scrolltop', $(window).scrollTop());
+            console.log('offset top', $('.mobile-up-icon').offset().top);
+            console.log('offset left', $('.mobile-up-icon').offset().left);
+
+            if(scrollTop > top/8){
+                $('.mobile-up-icon').removeClass("leave");
+            }else{
+                $('.mobile-up-icon').addClass("leave");
+            }
+        })
+        $('.mobile-up-icon').click(function(){
+            $(body).scrollTop = 0;
+        })
+
+        
     </script>
     
 </body>
