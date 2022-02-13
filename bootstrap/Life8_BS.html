@@ -288,21 +288,25 @@
     
     <script>
         let index = 0;
+        let lastImg = 0;
         let myInterval = null;
 
-
+        // click event
         $('.wrap-dot li').click(function(){
-            
-            // console.log('this:', $(this).index());
             index = $(this).index();
-            
+            console.log('index', $(this).index());
             $(this).css('background','rgb(87, 87, 87)').siblings().css('background','rgb(219, 219, 219)');
 
             // console.log($('.banner-img img').eq(index));
             
-            $('.banner-img img').eq(index).addClass('active')
-            .siblings().removeClass('active');
-            
+            console.log('lastImg', lastImg);
+            $('.banner-img img').eq(lastImg).addClass('visual-hidden');
+
+            setTimeout(function(){
+                $('.banner-img img').eq(lastImg).removeClass('active').removeClass('visual-hidden');
+                $('.banner-img img').eq(index).addClass('active');
+                lastImg = index;
+            },400)
         });
 
         // autoplay
@@ -314,14 +318,20 @@
                 index = 0;
             }
             // console.log('index:', index);
-            $('.banner-img img').eq(index).addClass('active')
-            .siblings().removeClass('active');
+            // $('.banner-img img').eq(index).addClass('active')
+            // .siblings().removeClass('active');
 
             $('.wrap-dot li').eq(index)
             .css('background','rgb(87, 87, 87)')
             .siblings().css('background','rgb(219, 219, 219)');
 
+            $('.banner-img img').eq(lastImg).addClass('visual-hidden');
 
+            setTimeout(function(){
+                $('.banner-img img').eq(lastImg).removeClass('active').removeClass('visual-hidden');
+                $('.banner-img img').eq(index).addClass('active');
+                lastImg = index;
+            },400)
             },1500);
         }
         
